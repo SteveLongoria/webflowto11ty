@@ -167,6 +167,7 @@
 
 .heading {
   font-family: Poppins, sans-serif;
+  font-size: 30px;
 }
 
 .body {
@@ -182,8 +183,10 @@
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 48rem;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   display: flex;
 }
@@ -358,7 +361,8 @@
 .blog-index-heading {
   margin-top: 10px;
   margin-bottom: 0;
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .link {
@@ -397,7 +401,13 @@
   display: flex;
 }
 
-.h2.tag-header, .link-block {
+.h2.tag-header {
+  color: #000;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.link-block {
   color: #000;
 }
 
@@ -470,6 +480,10 @@
   margin-top: 20px;
 }
 
+.collection-item-2 {
+  text-align: left;
+}
+
 .blog-index-section {
   height: 560px;
   flex-direction: column;
@@ -488,6 +502,7 @@
 }
 
 .image {
+  max-width: 80%;
   border-radius: 50%;
 }
 
@@ -541,7 +556,14 @@
 }
 
 .related-blog-post-h3 {
-  font-size: 25px;
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 24px;
 }
 
 @media screen and (max-width: 991px) {
@@ -646,7 +668,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.125rem;
-    display: flex;
+    display: none;
   }
 
   .rl_navbar2_link {
@@ -682,7 +704,7 @@
   }
 
   .container {
-    width: 100vw;
+    width: 90vw;
   }
 
   .hero-h2 {
@@ -705,11 +727,19 @@
   .blog-post-page-container {
     width: 90vw;
   }
+
+  .grid {
+    grid-template-columns: 1.75fr 1fr;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .navbar-button {
     padding: .25rem 1rem;
+  }
+
+  .rl_navbar2_menu.is-page-height-tablet {
+    height: 30vh;
   }
 
   .rl_navbar2_component {
@@ -757,6 +787,17 @@
   .blog-index-section {
     height: 100%;
   }
+
+  .grid {
+    max-width: 90vw;
+    grid-template-columns: 1fr;
+  }
+
+  .div-block-2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -775,6 +816,10 @@
     font-size: 15px;
   }
 
+  .container {
+    width: 100vw;
+  }
+
   .rl_cta_form-wrapper {
     grid-row-gap: .75rem;
     flex-direction: column;
@@ -790,11 +835,19 @@
   }
 
   .collection-item-2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .blog-index-section {
     height: 100%;
+  }
+
+  .author-name {
+    font-size: 50px;
+  }
+
+  .heading-5 {
+    font-size: 18px;
   }
 }
 
@@ -816,69 +869,6 @@
 }
 
 
-@font-face {
-  font-family: 'Heebo';
-  src: url("/assets/fonts/heebo-extrabold.ttf") format('truetype'), url("/assets/fonts/heebo-bold.ttf") format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Heebo';
-  src: url("/assets/fonts/heebo-regular.ttf") format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Heebo';
-  src: url("/assets/fonts/heebo-semibold.ttf") format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Heebo variablefont wght';
-  src: url("/assets/fonts/heebo-variablefont_wght.ttf") format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Heebo';
-  src: url("/assets/fonts/heebo-extralight.ttf") format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Heebo';
-  src: url("/assets/fonts/heebo-medium.ttf") format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Heebo';
-  src: url("/assets/fonts/heebo-black.ttf") format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Heebo';
-  src: url("/assets/fonts/heebo-thin.ttf") format('truetype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Heebo';
-  src: url("/assets/fonts/heebo-light.ttf") format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
 @font-face {
   font-family: 'Poppins';
   src: url("/assets/fonts/poppins-extrabolditalic.ttf") format('truetype'), url("/assets/fonts/poppins-bolditalic.ttf") format('truetype');

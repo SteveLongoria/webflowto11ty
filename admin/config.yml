@@ -107,18 +107,9 @@ collections:
         label: Published On
         widget: datetime
         required: false
-      - label: Bio
-        name: body
-        widget: markdown
-        required: false
-      - hint: ''
-        name: f_bio-summary
-        label: Bio Summary
-        widget: text
-        required: false
       - hint: ''
         name: f_picture
-        label: Picture
+        label: Cover Image
         widget: object
         required: false
         fields:
@@ -135,17 +126,32 @@ collections:
             required: false
       - hint: ''
         name: f_email
-        label: Email
+        label: Mail
         widget: string
         required: false
       - hint: ''
         name: f_twitter-profile-link
-        label: Twitter Profile Link
+        label: Twitter Profile
         widget: string
         required: false
       - hint: ''
         name: f_facebook-profile-link
-        label: Facebook Profile Link
+        label: Facebook Profile
+        widget: string
+        required: false
+      - hint: ''
+        name: f_bio-2
+        label: Bio
+        widget: string
+        required: false
+      - hint: ''
+        name: f_website
+        label: Website
+        widget: string
+        required: false
+      - hint: ''
+        name: f_location
+        label: Location
         widget: string
         required: false
       - label: Tags
@@ -670,10 +676,6 @@ collections:
             name: title
             widget: hidden
             default: Links
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
           - hint: 'Original link: /, key: 2f'
             label: Link
             name: 2f
@@ -685,6 +687,10 @@ collections:
           - hint: 'Original link: /courses, key: 4b7060a9'
             label: Link
             name: 4b7060a9
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
             widget: string
           - hint: 'Original link: /tos, key: 171ec9'
             label: Link
